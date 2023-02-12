@@ -1,0 +1,128 @@
+*{
+    padding:0;
+    margin:0;;
+    font-family: sans-serif;
+}
+
+.grid-layout{
+    background: #000;
+    display:grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 15% 1fr 1fr 15%;
+    height:100vh;
+    gap: 1vh;
+       
+}
+
+@keyframes movement{
+
+    from{
+      opacity:0;
+      transform: scale(0.3);
+      filter: hue-rotate(180deg);
+    }
+     
+    to{
+       opacity: 1;
+       transform: scale(1);
+       filter: hue-rotate(0deg)
+    }
+}
+
+
+.box{
+    background: linear-gradient(90deg, rgba(27,59,122,1) 0%, rgba(0,212,255,1) 100%);;
+    border: 1px solid black;
+    color: rgb(255, 255, 255);
+    animation: movement .7s ease-out;
+    animation-fill-mode: backwards;
+    
+}
+
+.box:hover{
+    transform: scale(1.05, 1.05);
+    transition: .2s;
+}
+
+.grid-layout :nth-child(1){
+    animation-delay:  .1s;
+}
+
+.grid-layout :nth-child(2){
+    animation-delay:  .2s;
+}
+
+.grid-layout :nth-child(3){
+    animation-delay:  .3s;
+}
+
+.grid-layout :nth-child(4){
+    animation-delay:  .4s;
+}
+
+
+.grid-layout :nth-child(5) {
+    grid-column: 4/ 5 ;
+    grid-row: 2 /3;
+    animation-delay:  .5s;
+    
+}
+
+.grid-layout :nth-child(6) {
+    grid-column: 4/ 5 ;
+    grid-row: 3/ 4;
+    animation-delay:  .6s;
+}
+
+.grid-layout :nth-child(7){
+    grid-column: 4/5;
+    grid-row: 4/5;
+    animation-delay:  .7s;
+}
+
+.grid-layout :nth-child(8){
+    grid-column: 3/4;
+    grid-row: 4/5;
+    animation-delay:  .8s;
+}
+
+.grid-layout :nth-child(9){
+    grid-column: 2/3 ;
+    grid-row: 4/5;
+    animation-delay:  .9s;
+}
+
+.grid-layout :nth-child(10){
+    grid-column: 1/2;
+    grid-row: 4/5;
+    animation-delay:   1s;
+}
+
+.grid-layout :nth-child(11){
+    grid-column: 1/2;
+    grid-row: 3/4;
+    animation-delay:   1.1s;
+}
+
+.grid-layout :nth-child(12){
+    grid-column: 1/2;
+    grid-row: 2/3;
+    animation-delay:   1.2s;
+}
+
+.grid-layout :nth-child(13){
+    grid-column: 2/4;
+    grid-row: 2/4;
+    animation-delay:   1.3s;
+}
+
+
+
+.grid-layout :nth-child(13):hover{
+    transform:scale(1.03, 1.03)
+}
+
+
+
+
+
