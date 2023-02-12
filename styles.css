@@ -1,16 +1,23 @@
-*{
+body{
     padding:0;
-    margin:0;;
+    margin:0;
     font-family: sans-serif;
+    
 }
 
 .grid-layout{
     background: #000;
     display:grid;
     grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: 15% 1fr 1fr 15%;
-    height:100vh;
+    grid-template-columns: 1fr 2fr 2fr 1fr ;
+    height:88vh;
     gap: 1vh;
+    padding: 6vh;
+    grid-template-areas:
+     ' I II III IV '
+     ' XII XIII XIII V '
+     ' XI XIII XIII VI '
+     ' X IX VIII VII '
        
 }
 
@@ -19,24 +26,22 @@
     from{
       opacity:0;
       transform: scale(0.3);
-      filter: hue-rotate(180deg);
     }
      
     to{
        opacity: 1;
        transform: scale(1);
-       filter: hue-rotate(0deg)
     }
 }
 
 
 .box{
-    background: linear-gradient(90deg, rgba(27,59,122,1) 0%, rgba(0,212,255,1) 100%);;
+    background: linear-gradient(90deg, rgba(27,59,122,1) 0%, rgba(0,212,255,1) 100%);
     border: 1px solid black;
     color: rgb(255, 255, 255);
-    animation: movement .7s ease-out;
+    animation: movement 2s ease-out;
     animation-fill-mode: backwards;
-    
+    text-align: center;    
 }
 
 .box:hover{
@@ -46,74 +51,104 @@
 
 .grid-layout :nth-child(1){
     animation-delay:  .1s;
+    background-image: url(images/1.jpg);
+    background-size: cover;
+    background-position:center
 }
 
 .grid-layout :nth-child(2){
     animation-delay:  .2s;
+    background-image: url(images/7.jpg);
+    background-size: cover;
+    background-position:center
 }
 
 .grid-layout :nth-child(3){
     animation-delay:  .3s;
+    background-image: url(images/3.jpg);
+    background-size: cover;
+    background-position:center
 }
 
 .grid-layout :nth-child(4){
     animation-delay:  .4s;
+    background-image: url(images/9.jpg);
+    background-size: cover;
+    background-position:center
 }
 
 
 .grid-layout :nth-child(5) {
-    grid-column: 4/ 5 ;
-    grid-row: 2 /3;
+    grid-area: V;
     animation-delay:  .5s;
+    background-image: url(images/5.jpg);
+    background-size: cover;
+    background-position:center
     
 }
 
 .grid-layout :nth-child(6) {
-    grid-column: 4/ 5 ;
-    grid-row: 3/ 4;
+    grid-area: VI;
     animation-delay:  .6s;
+    background-image: url(images/6.jpg);
+    background-size: cover;
+    background-position:center
 }
 
 .grid-layout :nth-child(7){
-    grid-column: 4/5;
-    grid-row: 4/5;
+    grid-area: VII;
     animation-delay:  .7s;
+    background-image: url(images/8.jpg);
+    background-size: cover;
+    background-position:center
 }
 
 .grid-layout :nth-child(8){
-    grid-column: 3/4;
-    grid-row: 4/5;
+    grid-area: VIII;
     animation-delay:  .8s;
+    background-image: url(images/10.jpg);
+    background-size: cover;
+    background-position:center
 }
 
 .grid-layout :nth-child(9){
-    grid-column: 2/3 ;
-    grid-row: 4/5;
+    grid-area: IX;
     animation-delay:  .9s;
+    background-image: url(images/11.jpg);
+    background-size: cover;
+    background-position:center
 }
 
 .grid-layout :nth-child(10){
-    grid-column: 1/2;
-    grid-row: 4/5;
+    grid-area: X;
     animation-delay:   1s;
+    background-image: url(images/2.jpg);
+    background-size: cover;
+    background-position:center
 }
 
 .grid-layout :nth-child(11){
-    grid-column: 1/2;
-    grid-row: 3/4;
+    grid-area: XI;
     animation-delay:   1.1s;
+    background-image: url(images/12.jpg);
+    background-size: cover;
+    background-position:center
 }
 
 .grid-layout :nth-child(12){
-    grid-column: 1/2;
-    grid-row: 2/3;
+    grid-area:XII;
     animation-delay:   1.2s;
+    background-image: url(images/4.jpg);
+    background-size: cover;
+    background-position:center
 }
 
 .grid-layout :nth-child(13){
-    grid-column: 2/4;
-    grid-row: 2/4;
+    grid-area: XIII;
     animation-delay:   1.3s;
+    background-image: url(images/14.jpg);
+    background-size: cover;
+    background-position:center
 }
 
 
@@ -124,5 +159,18 @@
 
 
 
+@media (max-width: 1000px){
 
-
+    .grid-layout{
+        background: #000;
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 2fr 2fr 1fr;
+        height:88vh;
+        gap: 1vh;
+        padding: 6vh;
+           
+    }
+ 
+   
+}
